@@ -9,8 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(){
+            GeometryReader{geo in
+                Rectangle().frame(width: geo.size.width/4, height: geo.size.height/8, alignment:.center)
+                    .foregroundColor(.green)
+                  
+                  
+                    .onTapGesture {
+                   print("Hello, world!")
+                }
+            }
+            .padding([.all],40)
+        }
     }
 }
 
